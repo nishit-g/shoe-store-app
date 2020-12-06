@@ -34,5 +34,47 @@
     <fragment
         android:id="@+id/intstructionFragment"
         android:name="com.udacity.shoestore.IntstructionFragment"
-        android:label="IntstructionFragment" />
+        android:label="IntstructionFragment" >
+        <action
+            android:id="@+id/action_intstructionFragment_to_shoeListingFragment"
+            app:destination="@id/shoeListingFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeListingFragment"
+        android:name="com.udacity.shoestore.shoelisting.ShoeListingFragment"
+        android:label="fragment_shoe_listing"
+        tools:layout="@layout/fragment_shoe_listing" >
+        <action
+            android:id="@+id/action_shoeListingFragment_to_shoeDetailFragment"
+            app:destination="@id/shoeDetailFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_shoeListingFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"
+            app:popUpTo="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeDetailFragment"
+        android:name="com.udacity.shoestore.ShoeDetailFragment"
+        android:label="fragment_shoe_detail"
+        tools:layout="@layout/fragment_shoe_detail" >
+        <action
+            android:id="@+id/action_shoeDetailFragment_to_shoeListingFragment"
+            app:destination="@id/shoeListingFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
 </navigation>

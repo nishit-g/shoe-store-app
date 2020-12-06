@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.udacity.shoestore.databinding.FragmentIntstructionBinding
 
 /**
@@ -27,8 +28,8 @@ class IntstructionFragment : Fragment() {
 
 
 
-        binding.btGotIt.setOnClickListener {
-            Toast.makeText(requireContext(), "Now here's the main part coming", Toast.LENGTH_SHORT).show();
+        binding.btGotIt.setOnClickListener {view:View ->
+            view.findNavController().navigate(R.id.action_intstructionFragment_to_shoeListingFragment)
         }
 
         return binding.root

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ShoeDetailFragment">
+
+    <data>
+        <variable
+            name="shoeListingViewModel"
+            type="com.udacity.shoestore.shoelisting.ShoeListingViewModel" />
+    </data>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="16sp"
+        android:padding="8sp">
+
+        <!-- Shoe Name -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="Shoe Name"/>
+
+        <EditText
+            android:id="@+id/et_shoe_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="@={shoeListingViewModel.newShoe.name}"
+            android:hint="Enter your Shoe Name"
+            android:inputType="text"
+            android:layout_marginBottom="16sp"/>
+
+        <!-- Shoe Company -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="Shoe Company"/>
+
+        <EditText
+            android:id="@+id/et_shoe_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="@={shoeListingViewModel.newShoe.company}"
+            android:hint="Enter your Shoe company"
+            android:inputType="text"
+            android:layout_marginBottom="16sp"/>
+
+        <!-- Shoe Size -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="Shoe Size"/>
+
+        <EditText
+            android:id="@+id/et_shoe_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="@={`` + shoeListingViewModel.newShoe.size}"
+            android:hint="Enter your Shoe size"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="16sp"/>
+
+        <!-- Shoe Description -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="Shoe Description"/>
+
+        <EditText
+            android:id="@+id/et_shoe_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="@={shoeListingViewModel.newShoe.description}"
+            android:hint="Description"
+            android:inputType="text"
+            android:layout_marginBottom="16sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/bt_cancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Cancel"/>
+
+            <Button
+                android:id="@+id/bt_save"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="Save"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

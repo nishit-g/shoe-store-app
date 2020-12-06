@@ -5,6 +5,11 @@
     tools:context=".shoelisting.ShoeListingFragment">
 
     <!-- Complicated layout due to Floating action button, hence Constraint layout -->
+    <data>
+        <variable
+            name="shoeListingViewModel"
+            type="com.udacity.shoestore.shoelisting.ShoeListingViewModel" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
