@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.udacity.shoestore.databinding.FragmentLoginBinding
 
 /**
@@ -26,24 +27,28 @@ class LoginFragment : Fragment() {
 
         val binding: FragmentLoginBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_login,container,false);
 
+        // Edit Text fields
         val email : EditText = binding.etEmail
         val password : EditText = binding.etPass
 
+        // Buttons
         val btRegister : Button = binding.btRegister
         val btLogin : Button = binding.btLogin
 
+        //TODO : Save status that the user has logged in using LiveData
+
         // If Already registered : Directly Login -> move to Welcome fragment
-        btLogin.setOnClickListener{
-            //TODO : go to Welcome Fragment
-            Toast.makeText(requireContext(),"Welcome Fragment will be shown", Toast.LENGTH_SHORT).show()
+        btLogin.setOnClickListener{ view:View ->
+            //Navigate to Welcome Fragment
+            view.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
         }
 
-        // If email and password given then move to welcome fragment
+        // If email and password given then navigate to welcome fragment
         // Else show Toast : Require credentials
-        btRegister.setOnClickListener {
+        btRegister.setOnClickListener {view:View ->
             if(email.text.isNotBlank() && password.text.isNotBlank()){
-                //TODO : go to Welcome Fragment
-                Toast.makeText(requireContext(),"Welcome Fragment will be shown", Toast.LENGTH_SHORT).show()
+                //Navigate to Welcome Fragment
+                view.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
             }
             else{
                 Toast.makeText(requireContext(),"Enter your credentials first", Toast.LENGTH_SHORT).show()
