@@ -12,6 +12,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 import com.udacity.shoestore.shoelisting.ShoeListingViewModel
 import timber.log.Timber
@@ -29,7 +30,6 @@ class ShoeDetailFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_shoe_detail,container,false)
-
 
 
         // For Enabling / Disabling Save button
@@ -87,4 +87,5 @@ class ShoeDetailFragment : Fragment() {
                         && binding.etShoeDesc.text.isNotEmpty() && binding.etShoeSize.text.isNotEmpty()
         }
     }
+
 }
