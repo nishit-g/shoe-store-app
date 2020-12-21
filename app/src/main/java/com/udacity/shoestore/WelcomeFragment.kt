@@ -30,7 +30,7 @@ class WelcomeFragment : Fragment() {
 
         // Move to Instruction Fragment
         btToInstruction.setOnClickListener {view : View ->
-            view.findNavController().navigate(R.id.action_welcomeFragment_to_intstructionFragment)
+            view.findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToIntstructionFragment())
         }
 
         return binding.root

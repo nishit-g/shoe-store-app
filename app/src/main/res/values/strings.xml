@@ -9,4 +9,15 @@
     <string name="login">Login with Existing account</string>
     <string name="instructions">Instructions</string>
     <string name="logout">Logout</string>
+    <string name="hint_password">password</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="hint_description">Description</string>
+    <string name="shoe_description">Shoe Description</string>
+    <string name="hint_enter_your_shoe_size">Enter your Shoe size</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="enter_your_shoe_company">Enter your Shoe company</string>
+    <string name="shoe_company">Shoe Company</string>
+    <string name="enter_your_shoe_name">Enter your Shoe Name</string>
+    <string name="shoe_name">Shoe Name</string>
 </resources>

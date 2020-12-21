@@ -40,7 +40,7 @@ class LoginFragment : Fragment() {
         // If Already registered : Directly Login -> move to Welcome fragment
         btLogin.setOnClickListener{ view:View ->
             //Navigate to Welcome Fragment
-            view.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
+            view.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
         }
 
         // If email and password given then navigate to welcome fragment
@@ -48,7 +48,7 @@ class LoginFragment : Fragment() {
         btRegister.setOnClickListener {view:View ->
             if(email.text.isNotBlank() && password.text.isNotBlank()){
                 //Navigate to Welcome Fragment
-                view.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
+                view.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
             }
             else{
                 Toast.makeText(requireContext(),"Enter your credentials first", Toast.LENGTH_SHORT).show()

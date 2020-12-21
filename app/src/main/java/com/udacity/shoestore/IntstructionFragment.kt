@@ -29,7 +29,7 @@ class IntstructionFragment : Fragment() {
 
 
         binding.btGotIt.setOnClickListener {view:View ->
-            view.findNavController().navigate(R.id.action_intstructionFragment_to_shoeListingFragment)
+            view.findNavController().navigate(IntstructionFragmentDirections.actionIntstructionFragmentToShoeListingFragment())
         }
 
         return binding.root

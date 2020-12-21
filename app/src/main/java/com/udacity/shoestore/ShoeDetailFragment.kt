@@ -43,7 +43,7 @@ class ShoeDetailFragment : Fragment() {
 
         // Navigate back to Shoe Listing View
         binding.btCancel.setOnClickListener { view : View ->
-            view.findNavController().navigate(R.id.action_shoeDetailFragment_to_shoeListingFragment)
+            view.findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListingFragment())
         }
 
         // On Save add the new shoe to the list
@@ -58,7 +58,7 @@ class ShoeDetailFragment : Fragment() {
                 viewModel.successfullyNavigated()
 
                 // Navigate back
-                findNavController(this).navigate(R.id.action_shoeDetailFragment_to_shoeListingFragment)
+                findNavController(this).navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListingFragment())
             }
         })
 

@@ -57,7 +57,9 @@ class ShoeListingFragment : Fragment() {
 
         // Navigate to shoe Detail fragment
         binding.newShoeButton.setOnClickListener { view:View->
-            view.findNavController().navigate(R.id.action_shoeListingFragment_to_shoeDetailFragment)
+            // Update using SafeArgs Plugin
+//            view.findNavController().navigate(R.id.action_shoeListingFragment_to_shoeDetailFragment)
+            view.findNavController().navigate(ShoeListingFragmentDirections.actionShoeListingFragmentToShoeDetailFragment())
         }
 
         setHasOptionsMenu(true)
