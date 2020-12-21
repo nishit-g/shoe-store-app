@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.udacity.shoestore.databinding.FragmentLoginBinding
@@ -26,6 +27,11 @@ class LoginFragment : Fragment() {
     ): View? {
 
         val binding: FragmentLoginBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_login,container,false);
+
+        // Unable to hide the action bar - How do I do it ?
+//        this.requireActivity().actionBar?.hide()
+
+        (activity as AppCompatActivity).supportActionBar?.hide()
 
         // Edit Text fields
         val email : EditText = binding.etEmail

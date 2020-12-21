@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/secondaryLightColor"
         android:layout_margin="16dp"
         android:padding="8dp">
 
     <TextView
         android:id="@+id/tv_shoe_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Flamingos"
-        android:textSize="32sp"
+        style="@style/common_detail_style"
+        tools:text="Flamingos"
         android:textStyle="bold"
-        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@id/tv_shoe_company"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"/>
@@ -24,6 +22,7 @@
     <TextView
         android:id="@+id/tv_shoe_company"
         android:layout_width="wrap_content"
+        android:background="@color/secondaryLightColor"
         android:layout_height="wrap_content"
         android:text="Adidas"
         android:textSize="24sp"
@@ -36,8 +35,9 @@
     <TextView
         android:id="@+id/tv_shoe_description"
         android:layout_width="wrap_content"
+        android:background="@color/secondaryLightColor"
         android:layout_height="wrap_content"
-        android:text="This will be the description of the shoe written by the user"
+        tools:text="This will be the description of the shoe written by the user"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@id/tv_shoe_company"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -46,12 +46,11 @@
     <TextView
         android:id="@+id/tv_shoe_size"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="6.0"
-        android:textSize="36sp"
+        style="@style/common_detail_style"
+        tools:text="6.0"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/tv_shoe_description"
+        app:layout_constraintTop_toTopOf="@id/tv_shoe_name"
+        app:layout_constraintBottom_toBottomOf="@id/tv_shoe_name"
         app:layout_constraintRight_toRightOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

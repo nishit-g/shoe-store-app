@@ -19,71 +19,51 @@
 
         <!-- Shoe Name -->
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="32sp"
+            style="@style/et_heading_style"
             android:text="@string/shoe_name"/>
 
         <EditText
             android:id="@+id/et_shoe_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
+            style="@style/et_style"
             android:text="@={shoeListingViewModel.newShoe.name}"
             android:hint="@string/enter_your_shoe_name"
-            android:inputType="text"
-            android:layout_marginBottom="16sp"/>
+            android:inputType="text"/>
 
         <!-- Shoe Company -->
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="32sp"
+            style="@style/et_heading_style"
             android:text="@string/shoe_company"/>
 
         <EditText
             android:id="@+id/et_shoe_company"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
+            style="@style/et_style"
             android:text="@={shoeListingViewModel.newShoe.company}"
             android:hint="@string/enter_your_shoe_company"
-            android:inputType="text"
-            android:layout_marginBottom="16sp"/>
+            android:inputType="text"/>
 
         <!-- Shoe Size -->
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="32sp"
+            style="@style/et_heading_style"
             android:text="@string/shoe_size"/>
 
         <EditText
             android:id="@+id/et_shoe_size"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
+            style="@style/et_style"
             android:text="@={`` + shoeListingViewModel.newShoe.size}"
             android:hint="@string/hint_enter_your_shoe_size"
-            android:inputType="numberDecimal"
-            android:layout_marginBottom="16sp"/>
+            android:inputType="numberDecimal"/>
 
         <!-- Shoe Description -->
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="32sp"
+            style="@style/et_heading_style"
             android:text="@string/shoe_description"/>
 
         <EditText
             android:id="@+id/et_shoe_desc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
+            style="@style/et_style"
             android:text="@={shoeListingViewModel.newShoe.description}"
             android:hint="@string/hint_description"
-            android:inputType="text"
-            android:layout_marginBottom="16sp"/>
+            android:inputType="text"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -92,18 +72,14 @@
 
             <Button
                 android:id="@+id/bt_cancel"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
+                style="@style/detail_btn_style"
                 android:text="@string/cancel"/>
 
             <Button
                 android:id="@+id/bt_save"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
                 android:enabled="false"
-                android:text="@string/save"/>
+                android:text="@string/save"
+                style="@style/detail_btn_style" />
 
         </LinearLayout>
 

@@ -33,6 +33,8 @@ class ShoeListingFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding : FragmentShoeListingBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_shoe_listing,container,false)
 
+        (activity as AppCompatActivity).supportActionBar?.show()
+
         // initialize the view model
         viewModel = ViewModelProvider(requireActivity()).get(ShoeListingViewModel::class.java)
         binding.shoeListingViewModel = viewModel

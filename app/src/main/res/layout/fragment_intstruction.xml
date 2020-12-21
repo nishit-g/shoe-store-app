@@ -4,36 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".InstructionFragment">
 
-    <!--TODO : Beautify layout
-        TODO : Store string in strings.xml -->
-
     <LinearLayout style="@style/ll_centre_vertical_16m_style">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/instructions"
-            android:textSize="40sp"
-            android:gravity="center" />
+            style="@style/main_heading_style"
+            android:text="@string/instructions"/>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1.CLick on + button to add you shoe"
+            style="@style/et_heading_style"
+            android:text="@string/instruction_1"
+            android:gravity="center_horizontal"
             android:textSize="24sp"/>
 
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="2.Click three dots to logout"
+            style="@style/et_heading_style"
+            android:gravity="center_horizontal"
+            android:text="@string/instruction_2"
             android:textSize="24sp"/>
 
         <Button
             android:id="@+id/bt_got_it"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Got it"
-            android:layout_gravity="center"/>
+            style="@style/bt_style"
+            android:text="@string/got_it"/>
     </LinearLayout>
 </layout>

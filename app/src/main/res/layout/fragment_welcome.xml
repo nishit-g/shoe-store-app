@@ -9,27 +9,21 @@
     <LinearLayout style="@style/ll_centre_vertical_16m_style">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Welcome!"
-            android:textSize="56sp"
-            android:padding="8dp"
-            android:gravity="center"/>
+            style="@style/main_heading_style"
+            android:text="@string/welcome"/>
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Your personal shoe inventory"
             android:textSize="30sp"
+            android:textColor="@color/secondaryTextColor"
+            android:text="Your personal shoe inventory"
             android:gravity="center"/>
 
         <Button
             android:id="@+id/bt_instruct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Let's go"
-            android:layout_margin="8dp"
-            android:layout_gravity="center"/>
+            style="@style/bt_style"
+            android:text="@string/let_s_go"/>
     </LinearLayout>
 </layout>

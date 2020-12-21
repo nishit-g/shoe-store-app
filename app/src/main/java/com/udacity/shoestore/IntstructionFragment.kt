@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.udacity.shoestore.databinding.FragmentIntstructionBinding
@@ -26,7 +27,10 @@ class IntstructionFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding : FragmentIntstructionBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_intstruction,container, false)
 
+        // Unable to hide the action bar - How do I do it ?
+//        this.requireActivity().actionBar?.hide()
 
+        (activity as AppCompatActivity).supportActionBar?.hide()
 
         binding.btGotIt.setOnClickListener {view:View ->
             view.findNavController().navigate(IntstructionFragmentDirections.actionIntstructionFragmentToShoeListingFragment())
