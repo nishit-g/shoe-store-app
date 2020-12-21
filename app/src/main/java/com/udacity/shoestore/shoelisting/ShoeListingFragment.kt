@@ -1,5 +1,7 @@
 package com.udacity.shoestore.shoelisting
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
@@ -34,6 +36,9 @@ class ShoeListingFragment : Fragment() {
         val binding : FragmentShoeListingBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_shoe_listing,container,false)
 
         (activity as AppCompatActivity).supportActionBar?.show()
+        (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.app_name)
+
 
         // initialize the view model
         viewModel = ViewModelProvider(requireActivity()).get(ShoeListingViewModel::class.java)

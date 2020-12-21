@@ -5,7 +5,6 @@
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="colorAccent">@color/secondaryLightColor</item>
-        <item name="android:background">@color/primaryLightColor</item>
         <item name="android:textColor">@color/secondaryTextColor</item>
 
     </style>
@@ -81,7 +80,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">monospace</item>
-        <item name="android:textSize">36sp</item>
+        <item name="android:textSize">28sp</item>
         <item name="android:background">@color/secondaryLightColor</item>
         <item name="android:layout_marginBottom">4dp</item>
     </style>

@@ -26,4 +26,5 @@
     <string name="got_it">Got it</string>
     <string name="instruction_2">2. Touch on three dots to logout</string>
     <string name="instruction_1">1. Touch on + button to add you shoe</string>
+    <string name="shoe_detail">Shoe Detail</string>
 </resources>
